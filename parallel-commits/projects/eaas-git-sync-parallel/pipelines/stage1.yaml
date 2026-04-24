@@ -1,0 +1,21 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: stage1
+  project: eaas-git-sync-parallel
+spec:
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: parallel-commits/
+        repository: eaas-git-sync
+        revision: main
+      systemToGitSync: true
+    name: s1
+    type: SystemSync
