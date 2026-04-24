@@ -5,5 +5,10 @@ metadata:
   project: eaas-git-sync
 spec:
   active: true
+  sharing:
+    enabled: true
+    projects:
+    - id: m17v0wm
+      name: eaas-git-sync-parallel
   type: Docker
   version: r4.1.1
