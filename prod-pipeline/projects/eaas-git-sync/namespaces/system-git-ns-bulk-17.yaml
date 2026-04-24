@@ -1,0 +1,6 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: system-git-ns-bulk-17
+  project: eaas-git-sync
+spec: {}
