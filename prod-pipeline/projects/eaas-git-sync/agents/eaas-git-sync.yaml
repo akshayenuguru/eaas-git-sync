@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: eaas-git-sync
+  project: eaas-git-sync
+spec:
+  active: true
+  type: Docker
+  version: r4.1.1
