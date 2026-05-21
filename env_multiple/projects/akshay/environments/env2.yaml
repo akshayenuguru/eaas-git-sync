@@ -1,0 +1,33 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Environment
+metadata:
+  name: env2
+  project: akshay
+spec:
+  agents:
+  - name: agent-kr-tb
+  template:
+    name: et1
+    version: v1
+    versionState: unspecified
+  variables:
+  - name: iv1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - b
+        - c
+        type: restricted
+    value: '["a","b","c"]'
+    valueType: text
+  - name: iv2
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          rkv2: two
+          rkv3: three
+        type: restricted_key_values
+    value: '["rkv1","rkv2","rkv3"]'
+    valueType: json
