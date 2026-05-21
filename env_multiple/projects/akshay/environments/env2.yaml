@@ -14,23 +14,23 @@ spec:
   - name: iv1
     options:
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedValues:
         - a
         - b
         - c
         type: restricted
-    value: '["a","c"]'
+    value: '["c"]'
     valueType: text
   - name: iv2
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedKeyValues:
           rkv1: one
           rkv2: two
           rkv3: three
         type: restricted_key_values
-    value: '["rkv1","rkv3"]'
+    value: '["rkv3"]'
     valueType: text
