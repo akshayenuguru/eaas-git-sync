@@ -14,12 +14,13 @@ spec:
   - name: iv3
     options:
       override:
+        multiSelect: true
         restrictedValues:
         - "11"
         - "1"
         - "111"
         type: restricted
-    value: "1"
+    value: '["1","11","111"]'
     valueType: text
   - name: iv1
     options:
