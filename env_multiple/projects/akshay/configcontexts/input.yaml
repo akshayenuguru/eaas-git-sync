@@ -26,3 +26,12 @@ spec:
           rkv3: three
         type: restricted_key_values
     valueType: text
+  - name: iv3
+    options:
+      override:
+        restrictedValues:
+        - "11"
+        - "1"
+        - "111"
+        type: restricted
+    valueType: text
