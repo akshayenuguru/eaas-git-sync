@@ -37,3 +37,13 @@ spec:
         - "111"
         type: restricted
     valueType: expression
+  - name: iv4
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          exp1: '#{environment.id}#'
+          exp2: '#{environment.name}#'
+          exp3: '#{environment.project.name}#'
+        type: restricted_key_values
+    valueType: expression
