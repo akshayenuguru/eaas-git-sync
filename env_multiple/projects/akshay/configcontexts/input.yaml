@@ -8,6 +8,7 @@ spec:
   - key: ev1
     options:
       override:
+        multiSelect: true
         restrictedValues:
         - ev11
         - ev12
@@ -17,6 +18,7 @@ spec:
   - key: ev2
     options:
       override:
+        multiSelect: true
         restrictedKeyValues:
           ev21: ev21
           ev22: ev22
