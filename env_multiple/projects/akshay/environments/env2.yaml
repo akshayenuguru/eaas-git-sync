@@ -44,5 +44,5 @@ spec:
           rkv2: two
           rkv3: three
         type: restricted_key_values
-    value: '["rkv1","rkv3"]'
+    value: '["rkv1"]'
     valueType: text
