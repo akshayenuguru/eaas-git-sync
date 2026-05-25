@@ -11,28 +11,17 @@ spec:
     version: v1
     versionState: unspecified
   variables:
-  - name: iv3
-    options:
-      override:
-        multiSelect: true
-        restrictedValues:
-        - "11"
-        - "1"
-        - "111"
-        - "1111"
-        type: restricted
-    value: '["1","11","111"]'
-    valueType: text
   - name: iv1
     options:
+      displayMetadata: {}
       override:
-        multiSelect: false
+        multiSelect: true
         restrictedValues:
         - a
         - b
         - c
         type: restricted
-    value: "c"
+    value: '["c","a","b"]'
     valueType: text
   - name: iv2
     options:
@@ -44,5 +33,28 @@ spec:
           rkv2: two
           rkv3: three
         type: restricted_key_values
-    value: '["rkv1"]'
+    value: '["rkv1","rkv2","rkv3"]'
+    valueType: text
+  - name: iv4
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          exp1: '#{environment.id}#'
+          exp2: '#{environment.name}#'
+          exp3: '#{environment.project.name}#'
+        type: restricted_key_values
+    value: '["exp2","exp1","exp3"]'
+    valueType: expression
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - "11"
+        - "1"
+        - "111"
+        - "1111"
+        type: restricted
+    value: '["1","11","111"]'
     valueType: text
