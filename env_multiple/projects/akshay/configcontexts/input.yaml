@@ -52,6 +52,7 @@ spec:
     options:
       displayMetadata: {}
       override:
+        multiSelect: true
         restrictedValues:
         - "11"
         - "1"
