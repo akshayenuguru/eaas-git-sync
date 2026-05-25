@@ -1,0 +1,81 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Environment
+metadata:
+  name: env2
+  project: akshay
+spec:
+  agents:
+  - name: agent-kr-tb
+  envVars:
+  - key: ev1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - ev11
+        - ev12
+        - ev13
+        type: restricted
+    value: '["ev11","ev12","ev13"]'
+  - key: ev2
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          ev21: ev21
+          ev22: ev22
+          ev23: ev23
+        type: restricted_key_values
+    value: '["ev21","ev22","ev23"]'
+  template:
+    name: et1
+    version: v1
+    versionState: unspecified
+  variables:
+  - name: iv1
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - a
+        - b
+        - c
+        type: restricted
+    value: 
+    valueType: text
+  - name: iv2
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          rkv1: one
+          rkv2: two
+          rkv3: three
+        type: restricted_key_values
+    value: '["rkv1","rkv2","rkv3"]'
+    valueType: text
+  - name: iv4
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          exp1: '#{environment.id}#'
+          exp2: '#{environment.name}#'
+          exp3: '#{environment.project.name}#'
+        type: restricted_key_values
+    value: '["exp1","exp2","exp3"]'
+    valueType: expression
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - "11"
+        - "1"
+        - "111"
+        - "1111"
+        type: restricted
+    value: '["1","11","111"]'
+    valueType: text
