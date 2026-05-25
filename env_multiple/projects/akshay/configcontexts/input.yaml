@@ -9,6 +9,7 @@ spec:
     options:
       displayMetadata: {}
       override:
+        multiSelect: true
         restrictedValues:
         - a
         - b
