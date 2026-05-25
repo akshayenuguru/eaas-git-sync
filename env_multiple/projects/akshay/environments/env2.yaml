@@ -36,7 +36,7 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedValues:
         - a
         - b
@@ -61,8 +61,8 @@ spec:
       override:
         multiSelect: true
         restrictedKeyValues:
-          exp1: '#{environment.name}#'
-          exp2: '#{environment.id}#'
+          exp1: '#{environment.id}#'
+          exp2: '#{environment.name}#'
           exp3: '#{environment.project.name}#'
         type: restricted_key_values
     value: '["exp1","exp2","exp3"]'
