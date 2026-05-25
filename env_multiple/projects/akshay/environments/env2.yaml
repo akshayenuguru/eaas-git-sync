@@ -42,7 +42,7 @@ spec:
         - b
         - c
         type: restricted
-    value: 
+    value: '["a","b","c"]'
     valueType: text
   - name: iv2
     options:
