@@ -14,6 +14,7 @@ spec:
   - name: iv3
     options:
       override:
+        multiSelect: true
         restrictedValues:
         - "11"
         - "1"
@@ -37,7 +38,7 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedKeyValues:
           rkv1: one
           rkv2: two
