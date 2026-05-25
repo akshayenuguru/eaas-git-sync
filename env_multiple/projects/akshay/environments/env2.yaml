@@ -61,11 +61,11 @@ spec:
       override:
         multiSelect: true
         restrictedKeyValues:
-          exp1: '#{environment.id}#'
-          exp2: '#{environment.name}#'
+          exp1: '#{environment.name}#'
+          exp2: '#{environment.id}#'
           exp3: '#{environment.project.name}#'
         type: restricted_key_values
-    value: '["exp2","exp1","exp3"]'
+    value: '["exp1","exp2","exp3"]'
     valueType: expression
   - name: iv3
     options:
