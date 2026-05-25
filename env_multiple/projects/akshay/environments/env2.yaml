@@ -15,7 +15,6 @@ spec:
         - ev11
         - ev12
         - ev13
-        - ev14
         type: restricted
     value: '["ev11","ev12","ev13","ev14"]'
   - key: ev2
@@ -26,8 +25,9 @@ spec:
           ev21: ev21
           ev22: ev22
           ev23: ev23
+          ev24: ev24
         type: restricted_key_values
-    value: '["ev21","ev22","ev23"]'
+    value: '["ev21","ev22","ev23","ev24"]'
   template:
     name: et1
     version: v1
