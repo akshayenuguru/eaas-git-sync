@@ -60,8 +60,8 @@ spec:
     valueType: expression
   - name: iv4
     options:
+      displayMetadata: {}
       override:
-        multiSelect: true
         restrictedKeyValues:
           exp1: '#{environment.id}#'
           exp2: '#{environment.name}#'
