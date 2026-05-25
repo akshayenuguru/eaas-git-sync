@@ -16,7 +16,7 @@ spec:
         - ev12
         - ev13
         type: restricted
-    value: '["ev11","ev12","ev13","ev14"]'
+    value: '["ev11","ev12","ev13"]'
   - key: ev2
     options:
       override:
