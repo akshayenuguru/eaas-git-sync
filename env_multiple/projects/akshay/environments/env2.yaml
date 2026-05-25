@@ -6,6 +6,27 @@ metadata:
 spec:
   agents:
   - name: agent-kr-tb
+  envVars:
+  - key: ev1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - ev11
+        - ev12
+        - ev13
+        type: restricted
+    value: '["ev11","ev12","ev13"]'
+  - key: ev2
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          ev21: ev21
+          ev22: ev22
+          ev23: ev23
+        type: restricted_key_values
+    value: '["ev21","ev22","ev23"]'
   template:
     name: et1
     version: v1
@@ -21,7 +42,7 @@ spec:
         - b
         - c
         type: restricted
-    value: '["c","a","b"]'
+    value: '["a","b","c"]'
     valueType: text
   - name: iv2
     options:
