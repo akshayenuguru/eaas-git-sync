@@ -15,6 +15,7 @@ spec:
         - ev11
         - ev12
         - ev13
+        - ev14
         type: restricted
     value: '["ev11","ev12","ev13","ev14"]'
   - key: ev2
