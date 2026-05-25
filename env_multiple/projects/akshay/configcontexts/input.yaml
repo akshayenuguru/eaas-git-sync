@@ -4,6 +4,17 @@ metadata:
   name: input
   project: akshay
 spec:
+  envs:
+  - key: ev1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - ev1
+        - ev2
+        - ev3
+        type: restricted
+    value: ev1
   variables:
   - name: iv1
     options:
