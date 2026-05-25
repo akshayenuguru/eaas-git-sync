@@ -28,10 +28,11 @@ spec:
     valueType: text
   - name: iv3
     options:
+      displayMetadata: {}
       override:
         restrictedValues:
         - "11"
         - "1"
         - "111"
         type: restricted
-    valueType: text
+    valueType: expression
