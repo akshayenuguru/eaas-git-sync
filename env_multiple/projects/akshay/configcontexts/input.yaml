@@ -7,8 +7,8 @@ spec:
   variables:
   - name: iv1
     options:
+      displayMetadata: {}
       override:
-        multiSelect: true
         restrictedValues:
         - a
         - b
