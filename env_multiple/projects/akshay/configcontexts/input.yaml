@@ -63,6 +63,7 @@ spec:
     options:
       displayMetadata: {}
       override:
+        multiSelect: true
         restrictedKeyValues:
           exp1: '#{environment.id}#'
           exp2: '#{environment.name}#'
@@ -72,6 +73,7 @@ spec:
   - name: iv-r-j
     options:
       override:
+        multiSelect: true
         restrictedValues:
         - a
         - b
