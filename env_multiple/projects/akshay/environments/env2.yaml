@@ -42,8 +42,9 @@ spec:
           a: A
           b: B
           c: C
+          d: D
         type: restricted_key_values
-    value: '["a","b","c"]'
+    value: '["a","b","c","d"]'
     valueType: json
   - name: iv-r-t
     options:
@@ -66,9 +67,8 @@ spec:
           rkv1: one
           rkv2: two
           rkv3: three
-          rkv4: four
         type: restricted_key_values
-    value: '["rkv1","rkv2","rkv3","rkv4"]'
+    value: '["rkv1","rkv2","rkv3"]'
     valueType: text
   - name: iv-r-e
     options:
