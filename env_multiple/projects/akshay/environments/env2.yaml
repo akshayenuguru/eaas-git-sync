@@ -66,8 +66,9 @@ spec:
           rkv1: one
           rkv2: two
           rkv3: three
+          rkv4: four
         type: restricted_key_values
-    value: '["rkv1","rkv2","rkv3"]'
+    value: '["rkv1","rkv2","rkv3","rkv4"]'
     valueType: text
   - name: iv-r-e
     options:
@@ -78,7 +79,6 @@ spec:
         - "11"
         - "1"
         - "111"
-        - "1111"
         type: restricted
-    value: '["1","11","111","1111"]'
+    value: '["1","11","111"]'
     valueType: expression
