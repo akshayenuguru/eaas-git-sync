@@ -20,8 +20,9 @@ spec:
           exp1: '#{environment.id}#'
           exp2: '#{environment.name}#'
           exp3: '#{environment.project.name}#'
+          exp4: '#{environment.id}#'
         type: restricted_key_values
-    value: '["exp1","exp2","exp3"]'
+    value: '["exp1","exp2","exp3","exp4"]'
     valueType: expression
   - name: iv-r-j
     options:
@@ -42,9 +43,8 @@ spec:
           a: A
           b: B
           c: C
-          d: D
         type: restricted_key_values
-    value: '["a","b","c","d"]'
+    value: '["a","b","c"]'
     valueType: json
   - name: iv-r-t
     options:
