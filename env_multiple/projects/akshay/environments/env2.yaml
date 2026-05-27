@@ -11,6 +11,17 @@ spec:
     version: v1
     versionState: unspecified
   variables:
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - "111"
+        - "1"
+        - "11"
+        type: restricted
+    value: '["11","1","111"]'
+    valueType: text
   - name: iv-rv-e
     options:
       displayMetadata: {}
