@@ -54,9 +54,8 @@ spec:
         - a
         - b
         - c
-        - d
         type: restricted
-    value: '["a","b","c","d"]'
+    value: '["a","b","c"]'
     valueType: text
   - name: iv-rv-t
     options:
