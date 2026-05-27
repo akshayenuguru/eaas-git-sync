@@ -90,3 +90,13 @@ spec:
           c: C
         type: restricted_key_values
     valueType: json
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - "111"
+        - "1"
+        - "11"
+        type: restricted
+    valueType: text
