@@ -91,5 +91,5 @@ spec:
         - "111"
         - "1111"
         type: restricted
-    value: '["1","11","111","1111"]'
+    value: '["1","11","111"]'
     valueType: expression
