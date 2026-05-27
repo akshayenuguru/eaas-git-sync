@@ -19,8 +19,9 @@ spec:
         - "111"
         - "1"
         - "11"
+        - "1111"
         type: restricted
-    value: '["11","1","111"]'
+    value: '["11","1","111","1111"]'
     valueType: text
   - name: iv-rv-e
     options:
