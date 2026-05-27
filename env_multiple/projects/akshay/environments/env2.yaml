@@ -18,6 +18,7 @@ spec:
         restrictedValues:
         - "111"
         - "1"
+        - "11"
         - "1111"
         type: restricted
     value: '["11","1","111","1111"]'
@@ -53,8 +54,9 @@ spec:
           a: A
           b: B
           c: C
+          d: D
         type: restricted_key_values
-    value: '["a","b","c"]'
+    value: '["a","b","c","d"]'
     valueType: json
   - name: iv-r-t
     options:
