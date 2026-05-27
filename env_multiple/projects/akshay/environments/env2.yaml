@@ -31,9 +31,8 @@ spec:
         - a
         - b
         - c
-        - d
         type: restricted
-    value: '["a","b","c","d"]'
+    value: '["a","b","c"]'
     valueType: json
   - name: iv-rv-j
     options:
@@ -55,8 +54,9 @@ spec:
         - a
         - b
         - c
+        - d
         type: restricted
-    value: '["a","b","c"]'
+    value: '["a","b","c","d"]'
     valueType: text
   - name: iv-rv-t
     options:
