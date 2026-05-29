@@ -11,6 +11,18 @@ spec:
     version: v1
     versionState: unspecified
   variables:
+  - name: iv-r-e
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - "11"
+        - "1"
+        - "111"
+        type: restricted
+    value: '["111"]'
+    valueType: expression
   - name: iv3
     options:
       override:
@@ -80,15 +92,3 @@ spec:
         type: restricted_key_values
     value: '["rkv1","rkv2","rkv3"]'
     valueType: text
-  - name: iv-r-e
-    options:
-      displayMetadata: {}
-      override:
-        multiSelect: true
-        restrictedValues:
-        - "11"
-        - "1"
-        - "111"
-        type: restricted
-    value: '["1","11","111"]'
-    valueType: expression
