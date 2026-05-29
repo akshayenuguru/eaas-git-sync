@@ -20,7 +20,7 @@ spec:
         - "1"
         - "11"
         type: restricted
-    value: '["11"]'
+    value: '["111","11","1"]'
     valueType: text
   - name: iv-rv-e
     options:
@@ -32,7 +32,7 @@ spec:
           exp2: '#{environment.name}#'
           exp3: '#{environment.project.name}#'
         type: restricted_key_values
-    value: '["exp3"]'
+    value: '["exp3","exp2","exp3"]'
     valueType: expression
   - name: iv-r-j
     options:
