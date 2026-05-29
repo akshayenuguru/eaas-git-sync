@@ -92,6 +92,7 @@ spec:
     valueType: json
   - name: iv3
     options:
+      displayMetadata: {}
       override:
         multiSelect: true
         restrictedValues:
@@ -99,4 +100,5 @@ spec:
         - "1"
         - "11"
         type: restricted
+    value: "1"
     valueType: text
