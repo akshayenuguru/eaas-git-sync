@@ -32,7 +32,7 @@ spec:
           exp2: '#{environment.name}#'
           exp3: '#{environment.project.name}#'
         type: restricted_key_values
-    value: '["exp3","exp2","exp1"]'
+    value: '["exp3"]'
     valueType: expression
   - name: iv-r-j
     options:
