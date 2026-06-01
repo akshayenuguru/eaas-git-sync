@@ -8,7 +8,6 @@ spec:
   - key: ev1
     options:
       override:
-        multiSelect: true
         restrictedValues:
         - ev11
         - ev12
@@ -18,7 +17,6 @@ spec:
   - key: ev2
     options:
       override:
-        multiSelect: true
         restrictedKeyValues:
           ev21: ev21
           ev22: ev22
@@ -30,7 +28,6 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
         restrictedValues:
         - a
         - b
@@ -41,7 +38,6 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
         restrictedKeyValues:
           rkv1: one
           rkv2: two
@@ -52,7 +48,6 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
         restrictedValues:
         - "11"
         - "1"
@@ -63,7 +58,6 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
         restrictedKeyValues:
           exp1: '#{environment.id}#'
           exp2: '#{environment.name}#'
@@ -73,7 +67,6 @@ spec:
   - name: iv-r-j
     options:
       override:
-        multiSelect: true
         restrictedValues:
         - a
         - b
@@ -83,7 +76,6 @@ spec:
   - name: iv-rv-j
     options:
       override:
-        multiSelect: true
         restrictedKeyValues:
           a: A
           b: B
@@ -94,7 +86,6 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
         restrictedValues:
         - "111"
         - "1"
