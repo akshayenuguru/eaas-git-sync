@@ -4,6 +4,8 @@ metadata:
   name: env2-234
   project: akshay
 spec:
+  agents:
+  - name: agent-kr-tb
   template:
     name: et1
     version: v2-234
