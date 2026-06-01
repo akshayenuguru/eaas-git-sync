@@ -1,0 +1,86 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Environment
+metadata:
+  name: env2-234
+  project: akshay
+spec:
+  template:
+    name: et1
+    version: v2-234
+    versionState: unspecified
+  variables:
+  - name: iv-rv-j
+    options:
+      override:
+        restrictedKeyValues:
+          a: A
+          b: B
+          c: C
+        type: restricted_key_values
+    value: a
+    valueType: json
+  - name: iv3
+    options:
+      displayMetadata: {}
+      override:
+        restrictedValues:
+        - "111"
+        - "1"
+        - "11"
+        type: restricted
+    value: "11"
+    valueType: text
+  - name: iv-r-t
+    options:
+      displayMetadata: {}
+      override:
+        restrictedValues:
+        - a
+        - b
+        - c
+        type: restricted
+    value: b
+    valueType: text
+  - name: iv-rv-t
+    options:
+      displayMetadata: {}
+      override:
+        restrictedKeyValues:
+          rkv1: one
+          rkv2: two
+          rkv3: three
+        type: restricted_key_values
+    value: rkv1
+    valueType: text
+  - name: iv-r-e
+    options:
+      displayMetadata: {}
+      override:
+        restrictedValues:
+        - "11"
+        - "1"
+        - "111"
+        type: restricted
+    value: "1"
+    valueType: expression
+  - name: iv-rv-e
+    options:
+      displayMetadata: {}
+      override:
+        restrictedKeyValues:
+          exp1: '#{environment.id}#'
+          exp2: '#{environment.name}#'
+          exp3: '#{environment.project.name}#'
+        type: restricted_key_values
+    value: exp1
+    valueType: expression
+  - name: iv-r-j
+    options:
+      override:
+        restrictedValues:
+        - a
+        - b
+        - c
+        type: restricted
+    value: a
+    valueType: json
