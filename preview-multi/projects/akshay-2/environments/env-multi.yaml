@@ -55,13 +55,13 @@ spec:
   - name: iv3
     options:
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedValues:
         - eu
         - ind
         - asia
         type: restricted
-    value: '["asia","eu","ind"]'
+    value: asia
     valueType: json
   - name: iv4
     options:
