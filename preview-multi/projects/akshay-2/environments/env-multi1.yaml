@@ -24,7 +24,7 @@ spec:
           key2: value2
           key3: value3
         type: restricted_key_values
-    value: '["key2","key3"]'
+    value: '["key3","key2"]'
   template:
     name: et-multi
     version: v1
@@ -39,7 +39,7 @@ spec:
           k2: v2
           k3: v3
         type: restricted_key_values
-    value: '["k2","k3"]'
+    value: '["k3","k1"]'
     valueType: json
   - name: iv1
     options:
