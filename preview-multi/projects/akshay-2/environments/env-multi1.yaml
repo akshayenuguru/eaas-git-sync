@@ -8,23 +8,23 @@ spec:
   - key: env1
     options:
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedValues:
         - val1
         - val2
         - val3
         type: restricted
-    value: '["val2"]'
+    value: '["val1"]'
   - key: env2
     options:
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedKeyValues:
           key1: value1
           key2: value2
           key3: value3
         type: restricted_key_values
-    value: '["key2"]'
+    value: '["key1"]'
   template:
     name: et-multi
     version: v1
@@ -34,12 +34,12 @@ spec:
     options:
       displayMetadata: {}
       override:
-        multiSelect: true
+        multiSelect: false
         restrictedValues:
         - val1
         - val2
         type: restricted
-    value: '["val1","val2"]'
+    value: '["val1"]'
     valueType: text
   - name: iv2
     options:
