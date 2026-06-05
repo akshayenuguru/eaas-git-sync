@@ -8,13 +8,13 @@ spec:
   - key: env1
     options:
       override:
-        multiSelect: false
+        multiSelect: true
         restrictedValues:
         - val1
         - val2
         - val3
         type: restricted
-    value: '["val1","val2","val3"]'
+    value: '["val2","val3"]'
   - key: env2
     options:
       override:
@@ -24,7 +24,7 @@ spec:
           key2: value2
           key3: value3
         type: restricted_key_values
-    value: '["key2","key1","key3"]'
+    value: '["key2","key3"]'
   template:
     name: et-multi
     version: v1
@@ -39,7 +39,7 @@ spec:
           k2: v2
           k3: v3
         type: restricted_key_values
-    value: '["k3","k1"]'
+    value: '["k2","k3"]'
     valueType: json
   - name: iv1
     options:
