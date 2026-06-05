@@ -1,0 +1,19 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent3
+  project: akshay-2
+spec:
+  active: true
+  cluster:
+    name: akshay-mks-preview
+  config:
+    concurrency: 15
+    environment:
+      numWorkers: 15
+    kubernetes:
+      limits:
+        cpu: "255"
+        memory: 1Gi
+  type: Cluster
+  version: r4.1.1
