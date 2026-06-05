@@ -8,7 +8,7 @@ spec:
   - key: env1
     options:
       override:
-        multiSelect: false
+        multiSelect: true
         restrictedValues:
         - val1
         - val2
@@ -30,6 +30,17 @@ spec:
     version: v1
     versionState: unspecified
   variables:
+  - name: iv1
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - val1
+        - val2
+        type: restricted
+    value: '["val1","val2"]'
+    valueType: text
   - name: iv2
     options:
       displayMetadata: {}
