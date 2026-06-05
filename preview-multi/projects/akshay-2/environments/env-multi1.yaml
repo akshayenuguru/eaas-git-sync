@@ -14,7 +14,7 @@ spec:
         - val2
         - val3
         type: restricted
-    value: '["val2","val1","val3"]'
+    value: '["val1","val2","val3"]'
   - key: env2
     options:
       override:
@@ -30,6 +30,17 @@ spec:
     version: v1
     versionState: unspecified
   variables:
+  - name: iv6
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          k1: v1
+          k2: v2
+          k3: v3
+        type: restricted_key_values
+    value: '["k3","k1"]'
+    valueType: json
   - name: iv1
     options:
       displayMetadata: {}
@@ -88,14 +99,3 @@ spec:
         type: restricted_key_values
     value: '["pro_name","env_name","org_name"]'
     valueType: expression
-  - name: iv6
-    options:
-      override:
-        multiSelect: true
-        restrictedKeyValues:
-          k1: v1
-          k2: v2
-          k3: v3
-        type: restricted_key_values
-    value: '["k3","k2","k1"]'
-    valueType: json
