@@ -16,7 +16,7 @@ spec:
         - env1val2
         - env1val3
         type: restricted
-    value: '["env1val1","env1val2","env1val3"]'
+    value: '["env1val1","env1val2"]'
   - key: env2
     options:
       override:
@@ -26,7 +26,7 @@ spec:
           key2: env2val2
           key3: env2val3
         type: restricted_key_values
-    value: '["key1","key2","key3"]'
+    value: '["key1","key2"]'
   template:
     name: et-multi
     version: v1
@@ -53,7 +53,7 @@ spec:
         - '#{environment.project.name}#'
         - '#{environment.id}#'
         type: restricted
-    value: '["#{environment.id}#","#{environment.name}#","#{environment.project.name}#"]'
+    value: '["#{environment.name}#","#{environment.project.name}#"]'
     valueType: expression
   - name: iv3
     options:
@@ -64,7 +64,7 @@ spec:
         - ind
         - asia
         type: restricted
-    value: '["asia","eu","ind"]'
+    value: '["eu","ind"]'
     valueType: json
   - name: iv4
     options:
@@ -76,7 +76,7 @@ spec:
           k2: v2
           k3: v3
         type: restricted_key_values
-    value: '["k1","k2","k3"]'
+    value: '["k1","k2"]'
     valueType: text
   - name: iv5
     options:
@@ -88,7 +88,7 @@ spec:
           org_name: '#{organization.name}#'
           pro_name: '#{environment.project.name}#'
         type: restricted_key_values
-    value: '["env_name","org_name","pro_name"]'
+    value: '["env_name","org_name"]'
     valueType: expression
   - name: iv6
     options:
@@ -99,5 +99,5 @@ spec:
           k2: v2
           k3: v3
         type: restricted_key_values
-    value: '["k1","k2","k3"]'
+    value: '["k1","k2"]'
     valueType: json
