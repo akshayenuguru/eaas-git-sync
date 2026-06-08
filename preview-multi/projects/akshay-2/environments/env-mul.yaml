@@ -1,0 +1,103 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Environment
+metadata:
+  name: env-mul
+  project: akshay-2
+spec:
+  agents:
+  - name: a2
+  envVars:
+  - key: env1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - env1val1
+        - env1val2
+        - env1val3
+        type: restricted
+    value: '["env1val1","env1val2"]'
+  - key: env2
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          key1: env2val1
+          key2: env2val2
+          key3: env2val3
+        type: restricted_key_values
+    value: '["key1","key2"]'
+  template:
+    name: et-multi
+    version: v1
+    versionState: unspecified
+  variables:
+  - name: iv1
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - val1
+        - val2
+        type: restricted
+    value: '["val1","val2"]'
+    valueType: text
+  - name: iv2
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - '#{environment.name}#'
+        - '#{environment.project.name}#'
+        - '#{environment.id}#'
+        type: restricted
+    value: '["#{environment.name}#","#{environment.project.name}#"]'
+    valueType: expression
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - eu
+        - ind
+        - asia
+        type: restricted
+    value: '["eu","ind"]'
+    valueType: json
+  - name: iv4
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          k1: v1
+          k2: v2
+          k3: v3
+        type: restricted_key_values
+    value: '["k1","k2"]'
+    valueType: text
+  - name: iv5
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          env_name: '#{environment.name}#'
+          org_name: '#{organization.name}#'
+          pro_name: '#{environment.project.name}#'
+        type: restricted_key_values
+    value: '["env_name","org_name"]'
+    valueType: expression
+  - name: iv6
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          k1: v1
+          k2: v2
+          k3: v3
+        type: restricted_key_values
+    value: '["k1","k2"]'
+    valueType: json
