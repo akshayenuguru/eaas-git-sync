@@ -1,0 +1,18 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ResourceTemplate
+metadata:
+  name: rt-multi
+  project: akshay-2
+spec:
+  provider: custom
+  providerOptions:
+    custom:
+      tasks:
+      - name: cp
+        onFailure: unspecified
+        skipConfig: {}
+        type: workflowHandler
+        workflowHandler:
+          name: akshay-wfh-read
+  version: v1
+  versionState: draft

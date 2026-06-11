@@ -1,0 +1,17 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: EnvironmentTemplate
+metadata:
+  name: et-multi
+  project: akshay-2
+spec:
+  allowScheduleOverrides: false
+  contexts:
+  - name: cc-multi
+  resources:
+  - kind: resourcetemplate
+    name: rt-multi
+    resourceOptions:
+      version: v1
+    type: dynamic
+  version: v1
+  versionState: draft
