@@ -1,0 +1,15 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: EnvironmentTemplate
+metadata:
+  name: et-terraform
+  project: akshay-2
+spec:
+  allowScheduleOverrides: false
+  resources:
+  - kind: resourcetemplate
+    name: rt-terraform
+    resourceOptions:
+      version: v1
+    type: dynamic
+  version: v1
+  versionState: draft
