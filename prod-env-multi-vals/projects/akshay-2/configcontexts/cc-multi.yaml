@@ -14,7 +14,7 @@ spec:
         - env1val2
         - env1val3
         type: restricted
-    value: '["env1val1", "env1val2"]'
+    value: env1val1
   - key: env2
     options:
       override:
@@ -28,6 +28,7 @@ spec:
   variables:
   - name: iv1
     options:
+      displayMetadata: {}
       override:
         multiSelect: true
         restrictedValues:
@@ -35,9 +36,11 @@ spec:
         - val2
         - val3
         type: restricted
+    value: val1
     valueType: text
   - name: iv2
     options:
+      displayMetadata: {}
       override:
         multiSelect: true
         restrictedValues:
@@ -45,6 +48,7 @@ spec:
         - '#{environment.name}#'
         - '#{organization.name}#'
         type: restricted
+    value: '#{environment.id}#'
     valueType: expression
   - name: iv3
     options:
