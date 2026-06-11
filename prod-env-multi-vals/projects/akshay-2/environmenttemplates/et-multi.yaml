@@ -4,6 +4,8 @@ metadata:
   name: et-multi
   project: akshay-2
 spec:
+  agents:
+  - name: agent-11jun
   allowScheduleOverrides: false
   contexts:
   - name: cc-multi
