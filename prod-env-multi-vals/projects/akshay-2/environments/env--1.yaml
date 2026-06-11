@@ -4,11 +4,78 @@ metadata:
   name: env--1
   project: akshay-2
 spec:
+  envVars:
+  - key: env1
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - env1val1
+        - env1val2
+        - env1val3
+        type: restricted
+    value: '["env1val1","env1val2","env1val3"]'
+  - key: env2
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          key1: env2val1
+          key2: env2val2
+          key3: env2val3
+        type: restricted_key_values
+    value: '["key1","key2","key3"]'
   template:
     name: et-multi
     version: v1
     versionState: unspecified
   variables:
+  - name: iv1
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - val1
+        - val2
+        - val3
+        type: restricted
+    value: '["val1","val2","val3"]'
+    valueType: text
+  - name: iv2
+    options:
+      displayMetadata: {}
+      override:
+        multiSelect: true
+        restrictedValues:
+        - '#{environment.id}#'
+        - '#{environment.name}#'
+        - '#{organization.name}#'
+        type: restricted
+    value: '["#{environment.id}#","#{environment.name}#","#{organization.name}#"]'
+    valueType: expression
+  - name: iv3
+    options:
+      override:
+        multiSelect: true
+        restrictedValues:
+        - val1
+        - val2
+        - val3
+        type: restricted
+    value: '["val1","val2","val3"]'
+    valueType: json
+  - name: iv4
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          key1: val1
+          key2: val2
+          key3: val3
+        type: restricted_key_values
+    value: '["key1","key2","key3"]'
+    valueType: text
   - name: iv5
     options:
       override:
@@ -18,5 +85,26 @@ spec:
           key2: '#{environment.id}#'
           key3: '#{organization.name}#'
         type: restricted_key_values
-    value: '["key1","key3"]'
+    value: '["key1","key3","key2"]'
     valueType: expression
+  - name: iv6
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          key1: val1
+          key2: val2
+          key3: val3
+        type: restricted_key_values
+    value: '["key1","key2","key3"]'
+    valueType: json
+  - name: normal
+    options:
+      override:
+        restrictedValues:
+        - a1
+        - a2
+        - a3
+        type: restricted
+    value: a2
+    valueType: text
