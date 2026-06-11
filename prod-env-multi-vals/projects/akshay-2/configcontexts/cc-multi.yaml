@@ -92,3 +92,13 @@ spec:
           key3: val3
         type: restricted_key_values
     valueType: json
+  - name: normal
+    options:
+      override:
+        restrictedValues:
+        - a1
+        - a2
+        - a3
+        type: restricted
+    value: a1
+    valueType: text
