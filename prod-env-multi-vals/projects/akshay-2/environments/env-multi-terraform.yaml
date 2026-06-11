@@ -32,7 +32,7 @@ spec:
     version: v1
     versionState: unspecified
   variables:
-  - name: iv1
+  - name: iv1-text
     options:
       displayMetadata: {}
       override:
@@ -40,10 +40,11 @@ spec:
         restrictedValues:
         - val1
         - val2
+        - val3
         type: restricted
     value: '["val1","val2"]'
     valueType: text
-  - name: iv2
+  - name: inv3-exp
     options:
       displayMetadata: {}
       override:
@@ -51,34 +52,34 @@ spec:
         restrictedValues:
         - '#{environment.name}#'
         - '#{environment.project.name}#'
-        - '#{environment.id}#'
+        - '#{organization.name}#'
         type: restricted
     value: '["#{environment.name}#","#{environment.project.name}#"]'
     valueType: expression
-  - name: iv3
+  - name: inv2-json
     options:
       override:
         multiSelect: true
         restrictedValues:
-        - eu
-        - ind
-        - asia
+        - val1
+        - val2
+        - val3
         type: restricted
-    value: '["eu","ind"]'
+    value: '["val1","val2"]'
     valueType: json
-  - name: iv4
+  - name: iv4-text
     options:
       displayMetadata: {}
       override:
         multiSelect: true
         restrictedKeyValues:
-          k1: v1
-          k2: v2
-          k3: v3
+          key1: val1
+          key2: val2
+          key3: val3
         type: restricted_key_values
-    value: '["k1","k2"]'
+    value: '["key1","key2"]'
     valueType: text
-  - name: iv5
+  - name: iv5-exp
     options:
       displayMetadata: {}
       override:
@@ -86,18 +87,18 @@ spec:
         restrictedKeyValues:
           env_name: '#{environment.name}#'
           org_name: '#{organization.name}#'
-          pro_name: '#{environment.project.name}#'
+          project_name: '#{environment.project.name}#'
         type: restricted_key_values
     value: '["env_name","org_name"]'
     valueType: expression
-  - name: iv6
+  - name: iv6-json
     options:
       override:
         multiSelect: true
         restrictedKeyValues:
-          k1: v1
-          k2: v2
-          k3: v3
+          key1: val1
+          key2: val2
+          key3: val3
         type: restricted_key_values
-    value: '["k1","k2"]'
+    value: '["key1","key2"]'
     valueType: json
