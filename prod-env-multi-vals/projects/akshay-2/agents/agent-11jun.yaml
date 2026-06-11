@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: agent-11jun
+  project: akshay-2
+spec:
+  active: true
+  cluster:
+    name: akshay-amd-prod-11jun
+  type: Cluster
+  version: r4.2.0

@@ -1,0 +1,18 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: tf-k8s-agent-version
+  project: akshay-2
+spec:
+  cluster:
+    name: akshay-amd-prod-11jun
+  config:
+    concurrency: 55
+    environment:
+      numWorkers: 15
+    kubernetes:
+      limits:
+        cpu: 255m
+        memory: 1Gi
+  type: Cluster
+  version: r4.2.0
