@@ -14,7 +14,7 @@ spec:
         - env1val2
         - env1val3
         type: restricted
-    value: '["env1val1","env1val2"]'
+    value: '["env1val1", "env1val2"]'
   - key: env2
     options:
       override:
