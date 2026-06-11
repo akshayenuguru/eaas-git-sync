@@ -36,7 +36,7 @@ spec:
         - val2
         - val3
         type: restricted
-    value: val1
+    value: '["val1","val2"]'
     valueType: text
   - name: iv2
     options:
