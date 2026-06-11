@@ -8,3 +8,15 @@ spec:
     name: et-multi
     version: v1
     versionState: unspecified
+  variables:
+  - name: iv5
+    options:
+      override:
+        multiSelect: true
+        restrictedKeyValues:
+          key1: '#{environment.name}#'
+          key2: '#{environment.id}#'
+          key3: '#{organization.name}#'
+        type: restricted_key_values
+    value: '["key1","key3"]'
+    valueType: expression
