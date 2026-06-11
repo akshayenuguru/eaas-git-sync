@@ -1,0 +1,20 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ResourceTemplate
+metadata:
+  name: rt-terraform
+  project: akshay-2
+spec:
+  contexts:
+  - name: config-multi-terraform
+  provider: custom
+  providerOptions:
+    custom:
+      tasks:
+      - name: cp
+        onFailure: unspecified
+        skipConfig: {}
+        type: workflowHandler
+        workflowHandler:
+          name: wfh-multi
+  version: v1
+  versionState: draft
