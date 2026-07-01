@@ -1,0 +1,24 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.39
+  name: mks-oneclick-v3-1-39
+  project: system-catalog
+spec:
+  config:
+    container:
+      cpuLimitMilli: "100"
+      image: registry.dev.rafay-edge.net/dev/mks-oneclick:20260630182706
+      imagePullCredentials:
+        password: sealed://registry_credentials
+        username: rafay@rafay.co
+      memoryLimitMb: "16"
+    timeoutSeconds: 7200
+    type: container
+  secret:
+    name: file://artifacts/mks-oneclick-v3-1-39/sealed-secret.yaml
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

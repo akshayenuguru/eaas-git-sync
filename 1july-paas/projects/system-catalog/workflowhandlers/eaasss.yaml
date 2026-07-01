@@ -1,0 +1,18 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  name: eaasss
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: registry.dev.rafay-edge.net/paas-eventdetails:v1
+      imagePullCredentials:
+        password: testbed123
+        username: pranay.jugge@rafay.co
+      language: python
+      name: handle
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    type: function

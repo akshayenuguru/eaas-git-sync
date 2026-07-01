@@ -1,0 +1,22 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  description: registry.dev.rafay-edge.net/rafay/vmaas-node-onboarding:main-149
+  name: vmaas-node-onboarding-workflow
+  project: system-catalog
+spec:
+  config:
+    function:
+      cpuLimitMilli: "500"
+      image: registry.dev.rafay-edge.net/rafay/vmaas-node-onboarding:v3.1.38-4
+      imagePullCredentials:
+        password: Rafay!2345
+        username: ram@rafay.co
+      language: python
+      memoryLimitMb: "1024"
+      name: vmaas-node-onboarding
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    timeoutSeconds: 1200
+    type: function

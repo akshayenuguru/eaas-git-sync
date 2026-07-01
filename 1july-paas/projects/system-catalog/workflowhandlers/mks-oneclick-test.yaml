@@ -1,0 +1,16 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  name: mks-oneclick-test
+  project: system-catalog
+spec:
+  config:
+    container:
+      image: registry.dev.rafay-edge.net/dev/mks-oneclick:20260630182706
+      imagePullCredentials:
+        password: sealed://registry_credentials
+        username: rafay@rafay.co
+    timeoutSeconds: 7200
+    type: container
+  secret:
+    name: file://artifacts/mks-oneclick-test/sealed-secret.yaml

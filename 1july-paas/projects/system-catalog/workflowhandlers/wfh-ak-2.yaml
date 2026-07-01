@@ -1,0 +1,15 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  name: wfh-ak-2
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: registry.dev.rafay-edge.net/dev/python-func:20260520111059
+      language: python
+      name: wfh2
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    type: function

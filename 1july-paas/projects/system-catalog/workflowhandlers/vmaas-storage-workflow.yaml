@@ -1,0 +1,29 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.37
+  name: vmaas-storage-workflow
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: ops-console.gpupaas-qc.dev.rafay-edge.net/rafay/vmaas-storage:v3.1.37-1
+      language: python
+      name: vmaas-storage-workflow
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    timeoutSeconds: 300
+    type: function
+  inputs:
+  - data:
+      variables:
+      - name: action
+        options:
+          override:
+            type: allowed
+          required: true
+        value: $(trigger.payload.type)$
+        valueType: expression
+    name: action

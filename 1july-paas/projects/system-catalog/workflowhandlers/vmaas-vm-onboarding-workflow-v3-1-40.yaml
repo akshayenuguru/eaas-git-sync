@@ -1,0 +1,46 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.40
+  name: vmaas-vm-onboarding-workflow-v3-1-40
+  project: system-catalog
+spec:
+  config:
+    function:
+      cpuLimitMilli: "1000"
+      image: registry.dev.rafay-edge.net/rafay/vmaas-vm-mgmt:v3.1.40-10
+      imagePullCredentials:
+        password: Rafay!2345
+        username: ram@rafay.co
+      language: python
+      maxConcurrency: 50
+      memoryLimitMb: "2048"
+      name: vmaas-vm-onboarding
+      numReplicas: 2
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    timeoutSeconds: 1200
+    type: function
+  inputs:
+  - data:
+      variables:
+      - name: action
+        options:
+          override:
+            type: allowed
+        value: |-
+          ## script begin ##
+          def eval(**ctx):
+            action_name = ctx["trigger"]["payload"].get("action_name")
+            if action_name:
+              return action_name
+            return ctx["trigger"]["payload"].get("action")
+          ## script end ##
+        valueType: expression
+    name: input
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

@@ -1,0 +1,30 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  name: tenant-onboarding-workflow
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: registry.dev.rafay-edge.net/dev/vmaas-tenant-onboarding:20260506163245
+      imagePullCredentials:
+        password: Rafay!2345
+        username: ram@rafay.co
+      language: python
+      name: tenant-onboarding
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    timeoutSeconds: 300
+    type: function
+  inputs:
+  - data:
+      variables:
+      - name: action
+        options:
+          override:
+            type: allowed
+          required: true
+        value: $(trigger.payload.type)$
+        valueType: expression
+    name: input

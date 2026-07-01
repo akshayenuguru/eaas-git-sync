@@ -1,0 +1,25 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.39
+  name: netris-workflow-v3-1-39
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: ops-console.gpupaas-qc.dev.rafay-edge.net/rafay/netris-handlers:v3.1.39-3
+      inactivityTimeoutSeconds: 500000
+      language: go
+      languageVersion: 1.23.4
+      maxConcurrency: 1000
+      name: netris-workflow-v1
+      numReplicas: 1
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    type: function
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

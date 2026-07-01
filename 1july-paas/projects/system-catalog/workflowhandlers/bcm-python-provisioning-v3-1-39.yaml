@@ -1,0 +1,34 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.39
+  description: Migration from Terraform
+  name: bcm-python-provisioning-v3-1-39
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: ops-console.gpupaas-qc.dev.rafay-edge.net/rafay/bcm-node-provisioning:v3.1.39-11
+      language: python
+      name: python-node-provisioning
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+    timeoutSeconds: 7200
+    type: function
+  inputs:
+  - data:
+      variables:
+      - name: action
+        options:
+          override:
+            type: allowed
+          required: true
+        value: $(trigger.payload.type)$
+        valueType: expression
+    name: input
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

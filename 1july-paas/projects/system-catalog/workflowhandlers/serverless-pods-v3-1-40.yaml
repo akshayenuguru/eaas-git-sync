@@ -1,0 +1,28 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.40
+  name: serverless-pods-v3-1-40
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: registry.rafay-edge.net/rafay/pod-as-service:v3.1.40-1
+      imagePullCredentials: {}
+      inactivityTimeoutSeconds: 10000
+      language: go
+      name: serverless-pods-v7-1
+      numReplicas: 2
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+      - linux/arm64
+    timeoutSeconds: 10000
+    type: function
+  inputs:
+  - name: serverless-pods-labels
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

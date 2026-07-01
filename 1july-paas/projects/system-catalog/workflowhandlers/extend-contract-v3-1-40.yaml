@@ -1,0 +1,27 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  annotations:
+    eaas.envmgmt.io/releaseversion: v3.1.40
+  name: extend-contract-v3-1-40
+  project: system-catalog
+spec:
+  config:
+    function:
+      image: registry.rafay-edge.net/rafay/extend-contract:v3.1.40-2
+      language: python
+      name: extend-contract
+      skipBuild: true
+      targetPlatforms:
+      - linux/amd64
+      - linux/arm64
+    type: function
+  inputs:
+  - name: billing-config
+  - name: contract-name-to-id
+  - name: rafay-creds
+  - name: m360-settings
+  sharing:
+    enabled: true
+    projects:
+    - name: '*'

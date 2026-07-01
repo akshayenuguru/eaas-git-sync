@@ -1,0 +1,8 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: WorkflowHandler
+metadata:
+  name: xcvcxv
+  project: system-catalog
+spec:
+  config:
+    type: function
